@@ -30,3 +30,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+node_modules/
+.output/
+.wrangler/
+.tanstack/
+.env
+.env.local
