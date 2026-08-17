@@ -1,5 +1,5 @@
 import { l as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
-import { i as cn } from "./router-TqFQiJeJ.mjs";
+import { i as cn } from "./router-j9fIEjLB.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/Section-CXu6bqw9.js
 var import_jsx_runtime = require_jsx_runtime();
 function SectionHeading({ eyebrow, title, description, align = "center", as: As = "h2" }) {

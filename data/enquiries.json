@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c47ba6a9-d20f-498c-b3d0-e0ab344581b3",
+    "name": "Test User",
+    "email": "test@example.com",
+    "phone": "9876543210",
+    "course": "MERN Full Stack Development",
+    "mode": "Online",
+    "message": "Hello from API test",
+    "submittedAt": "2026-08-17T13:02:31.332Z"
+  },
+  {
+    "id": "18bef583-02d0-4de1-9d00-63dec6302f68",
+    "name": "Divyasri S",
+    "email": "divyasrishanmugam3@gmail.com",
+    "phone": "9940672210",
+    "course": "Python Full Stack Development",
+    "mode": "Online",
+    "message": "",
+    "submittedAt": "2026-08-17T13:04:43.398Z"
+  }
+]

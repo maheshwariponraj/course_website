@@ -1,5 +1,5 @@
 import { l as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
-import { o as contact } from "./router-TqFQiJeJ.mjs";
+import { o as contact } from "./router-j9fIEjLB.mjs";
 import { n as SectionHeading, t as Section } from "./Section-CXu6bqw9.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/privacy-policy-BREC82qF.js
 var import_jsx_runtime = require_jsx_runtime();

@@ -20,26 +20,23 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/95 backdrop-blur-md">
-      <div className="container-page flex h-18 items-center justify-between gap-4 py-3">
+      <div className="container-page flex h-20 items-center justify-between gap-4 py-3 sm:h-22 lg:h-24">
         <Link
           to="/"
-          className="flex items-center gap-3"
+          className="group flex items-center gap-2.5 sm:gap-3 lg:gap-4"
           onClick={() => setOpen(false)}
         >
-          <img
-            src={logo}
-            alt="Ilai Digital Solutions logo"
-            width={48}
-            height={48}
-            className="size-11 rounded-lg object-contain"
-          />
-          <span className="block min-w-0">
-            <span className="block whitespace-nowrap text-sm font-bold leading-tight text-primary md:text-base">
-              Ilai Digital Solutions
-            </span>
-            <span className="block whitespace-nowrap text-[0.58rem] font-semibold uppercase tracking-[0.1em] text-muted-foreground sm:text-[0.65rem] sm:tracking-[0.18em]">
-              Professional Academy
-            </span>
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+            <img
+              src={logo}
+              alt="Ilai Professional Academy logo"
+              width={64}
+              height={64}
+              className="h-full w-full object-contain transition-opacity duration-200 group-hover:opacity-90"
+            />
+          </div>
+          <span className="block min-w-0 whitespace-nowrap text-sm font-extrabold leading-none tracking-[-0.04em] text-[#0d4b3e] sm:text-base lg:text-[1.55rem]">
+            Ilai Professional Academy
           </span>
         </Link>
 

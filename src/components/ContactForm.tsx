@@ -25,7 +25,7 @@ export function ContactForm({ defaultCourse }: { defaultCourse?: string }) {
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
@@ -43,11 +43,32 @@ export function ContactForm({ defaultCourse }: { defaultCourse?: string }) {
 
     setErrors({});
     setSubmitting(true);
-    window.setTimeout(() => {
-      setSubmitting(false);
+
+    try {
+      const response = await fetch("/api/enquiries", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(parsed.data),
+      });
+
+      const result = (await response.json().catch(() => null)) as
+        | { success?: boolean; message?: string }
+        | null;
+
+      if (!response.ok || result?.success !== true) {
+        throw new Error(result?.message ?? "Request failed");
+      }
+
       form.reset();
-      toast.success("Enquiry submitted. Our team will contact you shortly.");
-    }, 600);
+      toast.success("Thank you! Your enquiry has been submitted successfully.");
+    } catch (error) {
+      console.error(error);
+      toast.error("Unable to submit your enquiry. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const fieldClass = "h-11 rounded-xl";
